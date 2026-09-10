@@ -1,0 +1,605 @@
+CLAUDE SONNET 5 — MASTER BUILD PROMPT
+You are an expert Senior Full-Stack Engineer, UI/UX Designer, Product Designer, Database Architect, and Software Architect.
+Your task is to BUILD the complete project described below.
+CRITICAL EXECUTION RULE
+DO NOT spend the response creating a long implementation plan, roadmap, analysis, or staged planning document.
+Do not repeatedly tell me what you are going to build.
+Do not stop after planning.
+Do not ask me to approve Stage 1, Stage 2, Stage 3, etc.
+Do not wait for additional instructions.
+Start implementing the project immediately.
+If a decision is not explicitly specified, make the most sensible professional decision yourself and continue.
+The project is intentionally lightweight. Do NOT expand it into a large enterprise application.
+1. PROJECT OVERVIEW
+Project Name
+Create a professional brand name for the platform yourself.
+The name should be:
+
+* Short
+* Memorable
+* Creative
+* Premium
+* Suitable for a modern design platform
+* Easy to use as a logo/brand
+
+Do not use a generic name such as "Creative Website" or "Design Platform."
+2. PROJECT TYPE
+Creative / Design Discovery Website
+This is primarily a frontend-focused PHP website for practice.
+It does NOT need to become a huge full-stack SaaS product.
+The goal is to create a website that looks like it was designed and developed by a professional product/design team.
+3. TECHNOLOGY
+Use:
+
+* PHP
+* HTML5
+* CSS3
+* Vanilla JavaScript
+* MySQL
+
+Avoid unnecessary frameworks unless absolutely required.
+Do NOT introduce React, Next.js, Laravel, Node.js, APIs, microservices, Docker, Redis, queues, or other infrastructure unless genuinely necessary.
+The website should be simple to run in a normal PHP + MySQL environment such as XAMPP.
+4. PROJECT PURPOSE
+Create a polished creative-design discovery platform where users can explore inspiring creative projects and discover designers/studios.
+The website should feel like a premium digital design publication/community rather than a generic template.
+The emphasis is:
+
+* Visual quality
+* Typography
+* Layout
+* Editorial presentation
+* Project discovery
+* Professional UX
+* Responsive behavior
+* Micro-interactions
+* Clean architecture
+
+Keep the actual functionality lightweight.
+5. USER PAGES
+Create these pages:
+1. Home
+Purpose:
+Introduce the platform and immediately showcase exceptional creative work.
+Include:
+
+* Premium hero section
+* Short brand statement
+* Featured projects
+* Trending/curated work
+* Selected studios/designers
+* Editorial-style section
+* Strong CTA
+* Professional footer
+
+The homepage should feel visually impressive without relying on excessive animation.
+2. Discover
+A browsing page for creative projects.
+Include:
+
+* Page heading
+* Search
+* Category filters
+* Sort/filter controls
+* Project grid
+* Project cards
+* Creator information
+* Tags/categories
+* Responsive filtering behavior
+* Empty state
+* Loading state where appropriate
+
+Categories can include examples such as:
+
+* Branding
+* UI/UX
+* Editorial
+* Motion
+* Typography
+* Illustration
+* Photography
+* 3D
+
+Use dummy project data.
+3. Project Details
+A dedicated page for viewing a creative project.
+Include:
+
+* Project title
+* Large project visual
+* Project description
+* Designer/studio information
+* Category
+* Tags
+* Project metadata
+* Related projects
+* Navigation back to Discover
+
+Create a visually strong editorial layout.
+4. Studio
+A directory/showcase of creative studios and designers.
+Include:
+
+* Studio/designer cards
+* Profile image placeholders or designed visual placeholders
+* Name
+* Specialty
+* Short description
+* Selected work
+* Responsive grid
+
+Keep profiles static/dummy for this practice project.
+5. About
+Explain:
+
+* What the platform is
+* Its creative philosophy
+* Why it exists
+* What makes the platform different
+
+Use strong editorial typography and visual hierarchy.
+6. Contact
+Include:
+
+* Contact introduction
+* Name field
+* Email field
+* Subject field
+* Message field
+* Submit button
+* Contact information
+* Professional success/error states
+
+The form does NOT need a complicated email service.
+Basic PHP form handling is sufficient if implemented.
+6. DESIGN DIRECTION
+The design style is:
+AUTO — but professional.
+You must make the design decisions yourself.
+The final result should feel:
+
+* Premium
+* Modern
+* Creative
+* Sophisticated
+* Minimal without being boring
+* Editorial
+* Professional
+* Visually balanced
+
+Take inspiration from high-quality modern creative/product websites, but do NOT directly clone an existing website.
+Avoid generic Bootstrap-looking layouts.
+Avoid obvious template aesthetics.
+7. COLOR SYSTEM
+Create a professional custom color system.
+Important:
+The website should NOT simply be:
+
+* Pure white everywhere
+* Pure black everywhere
+* Random gradients everywhere
+
+Use a sophisticated light-oriented visual system with carefully selected neutral tones and one or two tasteful accent colors.
+Define colors as CSS variables/design tokens.
+Example structure:
+--color-background
+--color-surface
+--color-surface-muted
+--color-text
+--color-text-muted
+--color-border
+--color-accent
+--color-accent-hover
+Choose the actual values yourself.
+8. TYPOGRAPHY
+Use an elegant modern typography system.
+Prioritize:
+
+* Excellent heading typography
+* Readable body text
+* Clear hierarchy
+* Appropriate letter spacing
+* Responsive typography
+* Strong visual rhythm
+
+Use a professional web-safe or easily loaded font system.
+Do not use excessive font combinations.
+9. UI SYSTEM
+Create reusable components for:
+
+* Header
+* Navigation
+* Footer
+* Buttons
+* Project cards
+* Studio cards
+* Tags
+* Filters
+* Search
+* Forms
+* Input fields
+* Section headings
+* Badges
+* Breadcrumbs
+* Empty states
+* Loading states
+* Error states
+
+Components should remain visually consistent across every page.
+10. RESPONSIVE DESIGN
+The website must work properly on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Do not simply shrink the desktop design.
+Adapt:
+
+* Navigation
+* Grids
+* Typography
+* Spacing
+* Images
+* Forms
+* Cards
+* Content hierarchy
+
+for smaller screens.
+11. ANIMATIONS
+Use subtle, professional animation.
+Examples:
+
+* Hover transitions
+* Card image movement
+* Button transitions
+* Navigation transitions
+* Fade/slide reveals
+* Filter transitions
+* Page-load details
+
+Animations must be:
+
+* Fast
+* Smooth
+* Purposeful
+* Subtle
+
+Do NOT create huge cinematic animations everywhere.
+Do NOT sacrifice performance for animation.
+Respect `prefers-reduced-motion`.
+12. IMAGE / VISUAL STRATEGY
+The project is a practice website.
+Do not make the project dependent on dozens of external image URLs.
+If suitable imagery is unavailable, create sophisticated visual placeholders using:
+
+* Typography
+* Shapes
+* CSS compositions
+* Gradients used carefully
+* Abstract design blocks
+* Generated-style artwork placeholders
+
+Do not use emojis as visual design elements.
+Do not use random stock imagery just to fill space.
+The project should still look good if images fail to load.
+13. DATABASE
+Use MySQL, but keep the database intentionally small.
+Create only the tables that provide genuine value.
+Suggested structure:
+projects
+
+* id
+* title
+* slug
+* description
+* category
+* creator_name
+* creator_role
+* visual_reference
+* featured
+* created_at
+
+studios
+
+* id
+* name
+* slug
+* specialty
+* description
+* location
+* visual_reference
+* created_at
+
+If additional tables are genuinely useful, add them only when necessary.
+Do NOT create an unnecessarily complicated relational system.
+14. DATABASE SEED DATA
+Provide realistic dummy data.
+Projects should feel like actual creative projects.
+Examples:
+
+* Brand identity systems
+* Digital products
+* Editorial identities
+* Typography projects
+* Architecture branding
+* Experimental interfaces
+* Packaging concepts
+* Motion/design studies
+
+Use believable names and descriptions.
+Do not use:
+"Lorem ipsum."
+15. PHP ARCHITECTURE
+Keep the PHP architecture simple and maintainable.
+Use reusable includes/components such as:
+/includes/header.php
+/includes/footer.php
+/includes/db.php
+/includes/functions.php
+Pages can follow a straightforward structure such as:
+/index.php
+/discover.php
+/project.php
+/studio.php
+/about.php
+/contact.php
+Organize assets cleanly.
+Example:
+/assets/css/
+/assets/js/
+/assets/images/
+If a better lightweight structure is appropriate, use it.
+Do not over-engineer the application.
+16. DATABASE CONNECTION
+Use PDO.
+Use prepared statements.
+Keep database credentials isolated in a configuration file.
+Never hardcode database credentials throughout the application.
+Provide a simple SQL schema/seed file that can be imported into MySQL.
+17. SECURITY
+Even though this is a practice project, follow sensible PHP security practices:
+
+* PDO prepared statements
+* Input validation
+* Output escaping
+* CSRF protection for forms where appropriate
+* Safe form handling
+* Basic server-side validation
+* Avoid SQL injection
+* Avoid XSS
+* Do not expose database credentials
+
+Do not build unnecessary enterprise security infrastructure.
+18. SEARCH AND FILTERING
+The Discover page should have functional frontend interactions.
+Implement:
+
+* Search
+* Category filtering
+* Sorting
+* Reset filters
+* Empty results state
+
+Where appropriate, filtering can use lightweight PHP/MySQL queries.
+Do not create a complicated search engine.
+19. CONTACT FORM
+Create a professional contact form.
+Fields:
+
+* Name
+* Email
+* Subject
+* Message
+
+Include:
+
+* Required-field validation
+* Email validation
+* Success state
+* Error state
+
+A real production email provider is NOT required.
+20. ACCESSIBILITY
+Follow sensible WCAG-oriented practices.
+Include:
+
+* Semantic HTML
+* Proper labels
+* Keyboard navigation
+* Focus states
+* Sufficient contrast
+* Alt text
+* Accessible buttons
+* Accessible form errors
+* Reduced-motion support
+
+Do not sacrifice accessibility for aesthetics.
+21. SEO
+Implement basic SEO:
+
+* Unique page titles
+* Meta descriptions
+* Semantic headings
+* Clean URLs/slugs where practical
+* Open Graph metadata where appropriate
+* Descriptive image alt text
+* Proper HTML structure
+
+Do not build a huge SEO system.
+22. PERFORMANCE
+Keep the website lightweight.
+Prioritize:
+
+* Minimal JavaScript
+* Efficient CSS
+* Lazy-loaded images where applicable
+* No unnecessary libraries
+* No huge dependencies
+* No unnecessary API calls
+* Clean PHP rendering
+
+The website should feel fast.
+23. UX STATES
+Every appropriate interactive section should consider:
+Loading State
+Use lightweight skeleton/loading UI only where needed.
+Empty State
+Example:
+"No projects found."
+Provide a useful action such as resetting filters.
+Error State
+Use clear human-readable messages.
+Success State
+Confirm successful actions without intrusive popups.
+24. HEADER
+Create a polished responsive navigation.
+Desktop:
+
+* Brand/logo
+* Home
+* Discover
+* Studio
+* About
+* Contact
+* Optional CTA
+
+Mobile:
+
+* Compact logo
+* Menu button
+* Accessible mobile navigation
+
+The header should feel premium and restrained.
+25. FOOTER
+Include:
+
+* Brand
+* Short description
+* Navigation
+* Contact information
+* Social links using text links if appropriate
+* Copyright
+* Small legal/navigation links
+
+Do not overcrowd the footer.
+26. BRANDING
+Generate professional dummy branding.
+Create:
+
+* Brand name
+* Short tagline
+* Logo treatment using text/CSS where possible
+* Dummy email
+* Dummy phone
+* Dummy address
+* Dummy social links
+* Favicon concept
+* Brand colors
+
+The branding should feel like a real creative company.
+27. CODE QUALITY
+Write production-quality code.
+Requirements:
+
+* Clean naming
+* Reusable code
+* No unnecessary duplication
+* Comments only where useful
+* Maintainable CSS
+* Organized JavaScript
+* Semantic HTML
+* Secure PHP
+* Consistent formatting
+
+Do not generate giant monolithic files if the code can sensibly be separated.
+28. IMPORTANT SCOPE LIMIT
+This is NOT intended to become:
+
+* A full SaaS
+* A social network
+* A marketplace
+* A full CMS
+* A complex admin dashboard
+* A payment platform
+* A multi-role application
+* A real-time application
+* A large API ecosystem
+
+Do NOT add these features.
+The objective is a beautiful, convincing, functional creative/design website that is realistic for a practice project.
+29. FINAL BUILD REQUIREMENTS
+Build the actual project.
+Do not merely describe the code.
+Create all necessary:
+
+* PHP files
+* HTML structure
+* CSS
+* JavaScript
+* SQL schema
+* Dummy data
+* Reusable components
+* Configuration examples
+
+Ensure all navigation works.
+Ensure all pages are connected.
+Ensure links do not point to nonexistent pages.
+Ensure the project can run in a standard PHP + MySQL environment.
+30. FINAL QUALITY CHECK
+Before finishing, internally verify:
+UI
+
+* Professional visual hierarchy
+* Consistent spacing
+* Consistent typography
+* Strong cards
+* Excellent responsive behavior
+* No broken layouts
+
+UX
+
+* Navigation works
+* Search works
+* Filters work
+* Forms work
+* Empty states work
+* Error states work
+* Mobile navigation works
+
+Technical
+
+* PHP syntax is valid
+* SQL is valid
+* PDO is used
+* Queries are safe
+* Includes work
+* Paths work
+* Assets load correctly
+
+Design
+
+* No unnecessary emojis
+* No generic-looking template UI
+* No excessive animation
+* No visual clutter
+* No giant unnecessary feature set
+
+31. MOST IMPORTANT INSTRUCTION
+DO NOT GET STUCK IN PLANNING.
+You already have the requirements.
+Do not reply with:
+"Here is my plan."
+"First I will analyze..."
+"Would you like me to continue?"
+"Should I proceed?"
+"Let's start with Phase 1."
+Instead:
+START BUILDING THE PROJECT NOW.
+If the response becomes large, prioritize delivering the actual implementation over explaining it.
+Make reasonable decisions yourself.
+Do not repeatedly ask for permission.
+Do not intentionally expand the scope.
+Do not turn this into a massive full-stack application.
+Build a professional, polished, lightweight creative/design website using PHP + MySQL.

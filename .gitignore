@@ -1,0 +1,19 @@
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Auto-generated local SQLite databases
+*.sqlite
+*.sqlite3
+verso/data/*.sqlite
+
+# Logs & temp files
+*.log
+tmp/
