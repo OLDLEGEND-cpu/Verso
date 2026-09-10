@@ -1,11 +1,24 @@
 <?php
-// Verso Configuration
+// Verso Configuration & System Settings
 
-// Database configuration (Local MySQL PDO)
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'verso');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+// Polyfill for PHP < 8.0 compatibility
+if (!function_exists('str_starts_with')) {
+    function str_starts_with($haystack, $needle) {
+        return (string)$needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;
+    }
+}
+if (!function_exists('str_contains')) {
+    function str_contains($haystack, $needle) {
+        return (string)$needle !== '' && mb_strpos($haystack, $needle) !== false;
+    }
+}
+
+// Database configuration (Local MySQL / XAMPP / InfinityFree)
+// For InfinityFree, set your MySQL Host (e.g. sql100.infinityfree.com), DB Name, and User:
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_NAME', getenv('DB_NAME') ?: 'verso');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') !== false ? getenv('DB_PASS') : '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Supabase Configuration
@@ -22,21 +35,16 @@ define('SITE_EMAIL', 'hello@verso.studio');
 define('SITE_PHONE', '+1 (415) 555-0142');
 define('SITE_ADDRESS', '148 Mercer Street, New York, NY 10012');
 
-// Smart Base URL detection (works both in /verso/ subdirectory and root http://localhost:8000/)
+// Smart Base URL detection
 if (!defined('BASE_URL')) {
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || ($_SERVER['SERVER_PORT'] ?? '') == 443) ? 'https://' : 'http://';
-    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
     $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? ''));
-    
-    // Normalize path to directory of project root
     $basePath = rtrim($scriptDir, '/');
     if (basename($basePath) === 'includes') {
         $basePath = dirname($basePath);
     }
     
-    // If request URI starts with /verso, preserve it
     $requestUri = $_SERVER['REQUEST_URI'] ?? '';
-    if (str_starts_with($requestUri, '/verso')) {
+    if (substr($requestUri, 0, 6) === '/verso') {
         $basePath = '/verso';
     } elseif ($basePath === '/' || $basePath === '.') {
         $basePath = '';
