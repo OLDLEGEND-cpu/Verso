@@ -31,11 +31,22 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <div class="hero-aside">
-      <div class="hero-card-preview">
-        <div class="hero-preview-tag">Current Spotlight</div>
-        <div class="hero-preview-title">Meridian Variable Type System</div>
-        <div class="hero-preview-meta">Commissioned for transatlantic architectural criticism</div>
-      </div>
+      <a href="<?= url('project.php?slug=meridian-type-system') ?>" class="hero-card-preview" title="View Spotlight: Meridian Variable Type System">
+        <div class="hero-card-media">
+          <img src="<?= url('assets/images/projects/meridian_type.jpg') ?>" alt="Meridian Variable Type System" loading="eager">
+          <div class="hero-card-overlay"></div>
+        </div>
+        <div class="hero-card-body">
+          <div class="hero-preview-badge">
+            <span class="hero-preview-tag">Curator's Spotlight</span>
+            <span class="hero-preview-arrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </span>
+          </div>
+          <div class="hero-preview-title">Meridian Variable Type System</div>
+          <div class="hero-preview-meta">Hollow &amp; Pine &bull; Typography Specimen</div>
+        </div>
+      </a>
       <div class="hero-stats">
         <div class="hero-stat-item">
           <div class="hero-stat-value">240+</div>

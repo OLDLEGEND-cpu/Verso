@@ -50,7 +50,7 @@ $active = $active ?? '';
     </div>
   </div>
 
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" hidden>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" hidden style="display: none;">
     <a href="<?= url('index.php') ?>" class="<?= $active === 'home' ? 'is-active' : '' ?>">Home</a>
     <a href="<?= url('discover.php') ?>" class="<?= $active === 'discover' ? 'is-active' : '' ?>">Discover</a>
     <a href="<?= url('studio.php') ?>" class="<?= $active === 'studio' ? 'is-active' : '' ?>">Studios</a>
