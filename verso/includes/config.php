@@ -14,11 +14,15 @@ if (!function_exists('str_contains')) {
 }
 
 // Database configuration (Local MySQL / XAMPP / InfinityFree)
-// For InfinityFree, set your MySQL Host (e.g. sql100.infinityfree.com), DB Name, and User:
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('DB_NAME') ?: 'verso');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') !== false ? getenv('DB_PASS') : '');
+$dbHost = getenv('DB_HOST') ? getenv('DB_HOST') : 'localhost';
+$dbName = getenv('DB_NAME') ? getenv('DB_NAME') : 'verso';
+$dbUser = getenv('DB_USER') ? getenv('DB_USER') : 'root';
+$dbPass = getenv('DB_PASS') ? getenv('DB_PASS') : '';
+
+define('DB_HOST', $dbHost);
+define('DB_NAME', $dbName);
+define('DB_USER', $dbUser);
+define('DB_PASS', $dbPass);
 define('DB_CHARSET', 'utf8mb4');
 
 // Supabase Configuration
